@@ -3,19 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cullen Surf Hire | Quality Surfboards & Wetsuits in Scotland</title>
+    <title>Surf Hire Scotland | Quality Surfboard & Wetsuit Hire in Cullen</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <style>
         /* General Styles */
         :root {
             --primary-color: #1a73e8;
             --secondary-color: #34a853;
-            --accent-color: #f5b400;
-            --dark-blue: #174581;
+            --accent-color: #7dcffb;
+            --dark-blue: #1862c3;
             --light-blue: #e8f0fe;
             --text-color: #333;
             --light-text: #fff;
-            --dark-bg: #263238;
+            --dark-bg: #21353f;
         }
         
         * {
@@ -59,7 +60,7 @@
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 10px;
         }
         
         .btn {
@@ -108,14 +109,14 @@
         
         .section-title {
             text-align: center;
-            margin-bottom: 50px;
+            margin-bottom: 20px;
             font-size: 2.5rem;
             color: var(--dark-blue);
         }
         
         .section-subtitle {
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-size: 1.2rem;
             color: #666;
             max-width: 700px;
@@ -125,12 +126,8 @@
         
         /* Navigation */
         .navbar {
-            position: fixed;
-            top: 0;
-            left: 0;
             width: 100%;
             background-color: rgba(255, 255, 255, 0.9);
-            z-index: 1000;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
@@ -143,13 +140,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 0;
         }
         
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--dark-blue);
+            width: 100px;
+            height: 100px;
         }
         
         .nav-links {
@@ -179,7 +174,7 @@
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/api/placeholder/1920/1080') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/splash.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             text-align: center;
@@ -269,6 +264,9 @@
         
         .equipment-item {
             flex: 1;
+            display:flex;
+            align-items: center;
+            justify-content: center;
             min-width: 200px;
             background-color: var(--light-blue);
             padding: 20px;
@@ -305,35 +303,6 @@
             opacity: 1;
         }
         
-        /* Prices Section */
-        .price-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 30px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            border-radius: 10px;
-        }
-        
-        .price-table th, .price-table td {
-            padding: 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        
-        .price-table thead {
-            background-color: var(--dark-blue);
-            color: white;
-        }
-        
-        .price-table tbody tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        .price-table tbody tr:hover {
-            background-color: var(--light-blue);
-        }
-        
         /* Forecast Section */
         .forecast-section {
             background-color: var(--light-blue);
@@ -345,34 +314,38 @@
             align-items: center;
             gap: 40px;
         }
+
+        .forecast-links {
+            display: flex;
+            gap: 20px;
+            align-items:center;
+            justify-content: center;
+        }
         
         .forecast-info {
             flex: 1;
-            min-width: 300px;
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
         }
         
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .social-links a {
+        .social-link {
             display: flex;
             align-items: center;
             justify-content: center;
             width: 40px;
             height: 40px;
-            border-radius: 50%;
-            background-color: var(--dark-blue);
+            border-radius: 10px;
+            background-color: var(--primary-color);
             color: white;
             font-size: 1.2rem;
             transition: all 0.3s ease;
         }
         
-        .social-links a:hover {
-            background-color: var(--primary-color);
+        .social-link:hover {
+            background-color: var(--dark-blue);
             transform: translateY(-3px);
+            color: white;
         }
         
         /* Safety Section */
@@ -392,7 +365,7 @@
         
         .safety-img {
             width: 100%;
-            height: 200px;
+            height: auto;
             object-fit: cover;
         }
         
@@ -409,13 +382,8 @@
         }
         
         .partner-logo {
-            max-width: 150px;
-            max-height: 80px;
-        }
-        
-        /* Guide Section */
-        .guide-section {
-            background-color: var(--light-blue);
+            max-width: 100px;
+            max-height: 50px;
         }
         
         .guide-content {
@@ -433,16 +401,6 @@
         .guide-img {
             flex: 1;
             min-width: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        /* About Section */
-        .team-img {
-            width: 100%;
-            max-width: 800px;
-            margin: 0 auto 40px;
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -533,33 +491,67 @@
                 font-size: 1.2rem;
             }
         }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 20px 0;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-                transform: translateY(-150%);
-                transition: transform 0.3s ease;
-            }
-            
-            .nav-links.active {
-                transform: translateY(0);
-            }
-            
-            .nav-links li {
-                margin: 10px 0;
-            }
-            
-            .menu-toggle {
-                display: block;
-            }
+
+        /* Full Page Mobile Navigation Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--dark-blue);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 2000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+    
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .nav-links li {
+        margin: 15px 0;
+    }
+    
+    .nav-links a {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    
+    .nav-links a:hover {
+        color: var(--accent-color);
+    }
+    
+    .menu-toggle {
+        display: block;
+        z-index: 2001;
+        position: relative;
+    }
+    
+    .menu-toggle .fas {
+        font-size: 1.8rem;
+        transition: all 0.3s ease;
+    }
+    
+    .menu-toggle.active {
+        color: white;
+    }
+
+    .menu-toggle.active .fa-bars {
+        display: none;
+    }
+    
+    .menu-toggle:not(.active) .fa-times {
+        display: none;
+    }
             
             .section {
                 padding: 60px 0;
@@ -568,15 +560,7 @@
             .option-card {
                 min-width: 100%;
             }
-            
-            .price-table {
-                font-size: 0.9rem;
-            }
-            
-            .price-table th, .price-table td {
-                padding: 10px;
-            }
-        }
+}
         
         @media (max-width: 576px) {
             .section-title {
@@ -595,24 +579,122 @@
                 min-width: 100%;
             }
         }
+        /* Fixed Book Now Button Styles */
+.fixed-book-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    background-color: var(--primary-color); /* Same as splash buttons */
+    color: white;
+    padding: 12px 25px;
+    border-radius: 5px; /* Same as other buttons */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.fixed-book-btn:hover {
+    background-color: var(--dark-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .fixed-book-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Brand Logos Bar Styles */
+.brand-logos-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 20px;
+  background-color: rgb(242, 242, 242);
+}
+
+.brand-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 140px;
+}
+
+.brand-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);
+  opacity: 0.7;
+}
+
+.brand-logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .brand-logos-bar {
+    gap: 20px;
+    padding: 20px 15px;
+  }
+  
+  .brand-logo-container {
+    height: 70px;
+    width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brand-logos-bar {
+    gap: 15px;
+    padding: 15px 10px;
+  }
+  
+  .brand-logo-container {
+    height: 60px;
+    width: 100px;
+  }
+}
     </style>
 </head>
 <body>
+<!-- Fixed Book Now Button -->
+<a href="https://fareharbor.com/embeds/book/bluecoastsurf-paddle/?full-items=yes&flow=1355786" id="fixed-book-btn" class="fixed-book-btn">
+    <i class="fas fa-calendar-check"></i> Book Now
+</a>
  <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">Cullen Surf Hire</a>
+            <a href="#" class="logo"><img src="images/logo.png" alt="Cullen Surf Hire Logo"></a>
             <div class="menu-toggle">
                 <i class="fas fa-bars"></i>
+                <i class="fas fa-times"></i>
             </div>
             <ul class="nav-links">
                 <li><a href="#options">How It Works</a></li>
-                <li><a href="#equipment">Equipment</a></li>
-                <li><a href="#prices">Prices</a></li>
                 <li><a href="#forecast">Surf Forecast</a></li>
+                <li><a href="#guide">Local Guide</a></li>
                 <li><a href="#safety">Safety</a></li>
-                <li><a href="#guide">Guide</a></li>
-                <li><a href="#about">About</a></li>
             </ul>
         </div>
     </nav>
@@ -621,12 +703,34 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title">Cullen Surf Hire</h1>
-                <p class="hero-subtitle">A range of quality surfboards and wetsuits for practicing your skills or for your surf trip to Scotland.</p>
+                <h1 class="hero-title">Surf Hire Right At The Beach in Scotland</h1>
+                <p class="hero-subtitle">A range of quality surfboards and wetsuits for practicing your skills or for your surf trip to Scotland</p>
                 <a href="#options" class="btn">How It Works</a>
             </div>
         </div>
     </section>
+
+    <!-- Brand Logos Bar -->
+<div class="brand-logos-bar">
+    <div class="brand-logo-container">
+      <img src="images/alder.png" alt="Alder" class="brand-logo">
+    </div>
+    <div class="brand-logo-container">
+      <img src="images/c-skins.png" alt="C-Skins" class="brand-logo">
+    </div>
+    <div class="brand-logo-container">
+      <img src="images/dickpearce.png" alt="Dick Pearce & Friends" class="brand-logo">
+    </div>
+    <div class="brand-logo-container">
+      <img src="images/red.png" alt="Red Paddle Co" class="brand-logo">
+    </div>
+    <div class="brand-logo-container">
+      <img src="images/ryd.png" alt="RYD" class="brand-logo">
+    </div>
+    <div class="brand-logo-container">
+      <img src="images/sandbanks.png" alt="Sandbanks Style" class="brand-logo">
+    </div>
+  </div>
 
     <!-- Options Section -->
     <section class="section" id="options">
@@ -651,7 +755,7 @@
                         </ol>
                     </div>
                     <div class="option-footer">
-                        <a href="#" class="btn" id="book-regular">Book Now</a>
+                        <a href="https://fareharbor.com/embeds/book/bluecoastsurf-paddle/?full-items=yes&flow=1355786" class="btn" id="book-regular">Book Now</a>
                     </div>
                 </div>
                 
@@ -671,118 +775,10 @@
                         </ol>
                     </div>
                     <div class="option-footer">
-                        <a href="#" class="btn btn-disabled">Coming Soon</a>
+                        <div class="btn btn-disabled">Coming Soon</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Equipment Section -->
-    <section class="section" id="equipment">
-        <div class="container">
-            <h2 class="section-title">Our Range of Hire Equipment</h2>
-            <p class="section-subtitle">Quality gear for your surf adventures</p>
-            
-            <div class="equipment-list">
-                <div class="equipment-item">
-                    <h3>Hard / Hybrid Surfboards</h3>
-                </div>
-                <div class="equipment-item">
-                    <h3>Softboards</h3>
-                </div>
-                <div class="equipment-item">
-                    <h3>Bodyboards</h3>
-                </div>
-                <div class="equipment-item">
-                    <h3>Wetsuits</h3>
-                </div>
-                <div class="equipment-item">
-                    <h3>Wetsuit Accessories</h3>
-                    <p>(boots, gloves, hoods)</p>
-                </div>
-            </div>
-            
-            <p class="text-center">We also hire paddleboards and snorkelling equipment.</p>
-            
-            <div class="brands">
-                <img src="/api/placeholder/120/60" alt="Alder Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="RYD Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="NSP Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="C-Skins Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="Sandbanks Style Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="Red Paddle Co Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="Cortez Logo" class="brand-logo">
-                <img src="/api/placeholder/120/60" alt="Xcel Logo" class="brand-logo">
-            </div>
-        </div>
-    </section>
-
-    <!-- Prices Section -->
-    <section class="section" id="prices">
-        <div class="container">
-            <h2 class="section-title">Hire Prices</h2>
-            <p class="section-subtitle">Find the perfect package for your needs</p>
-            
-            <div class="table-responsive">
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Equipment</th>
-                            <th>3 Hours</th>
-                            <th>All Day</th>
-                            <th>3 Days</th>
-                            <th>7 Days</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Surfboard - Soft</td>
-                            <td>£15</td>
-                            <td>£20</td>
-                            <td>£50</td>
-                            <td>£90</td>
-                        </tr>
-                        <tr>
-                            <td>Surfboard - Hard</td>
-                            <td>£20</td>
-                            <td>£25</td>
-                            <td>£60</td>
-                            <td>£110</td>
-                        </tr>
-                        <tr>
-                            <td>Wetsuit</td>
-                            <td>£10</td>
-                            <td>£15</td>
-                            <td>£35</td>
-                            <td>£60</td>
-                        </tr>
-                        <tr>
-                            <td>Bodyboard</td>
-                            <td>£10</td>
-                            <td>£15</td>
-                            <td>£35</td>
-                            <td>£60</td>
-                        </tr>
-                        <tr>
-                            <td>Boots/Gloves/Hood</td>
-                            <td>£5 each</td>
-                            <td>£5 each</td>
-                            <td>£10 each</td>
-                            <td>£15 each</td>
-                        </tr>
-                        <tr>
-                            <td>Full Kit (Board, Wetsuit, Accessories)</td>
-                            <td>£30</td>
-                            <td>£40</td>
-                            <td>£90</td>
-                            <td>£160</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <p class="text-center">For paddleboard and snorkelling equipment prices, please <a href="#contact">contact us</a>.</p>
         </div>
     </section>
 
@@ -796,32 +792,46 @@
                 <div class="forecast-info">
                     <p>Stay up to date with the latest surf conditions at Cullen Beach. Check out the Surfline forecast below for detailed information, or follow us on social media for live updates throughout the day.</p>
                     
-                    <p>We regularly post live beach conditions, surf reports, and helpful tips on our social channels. Follow @cullensurfhire for the most accurate and current information.</p>
+                    <p>We regularly post live beach conditions, surf reports, and helpful tips on our Instagram. Follow @surfhirescotland for the most accurate and current information.</p>
                     
-                    <div class="social-links">
-                        <a href="https://facebook.com/cullensurfhire" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://instagram.com/cullensurfhire" target="_blank"><i class="fab fa-instagram"></i></a>
-                    </div>
-                    
-                    <p class="mt-4"><a href="https://www.surfline.com/surf-report/cullen/58581a98e4c02d716446e1ba" target="_blank" class="btn mt-3">Check Surfline Forecast</a></p>
-                </div>
-                
-                <div class="forecast-widget">
-                    <img src="/api/placeholder/400/300" alt="Surf Forecast Widget" class="rounded shadow">
+                    <p style="margin-top: 35px" class="forecast-links"><a href="https://www.surfline.com/surf-report/cullen/630d466e06b6e2dea68946e0" target="_blank" class="btn">Surfline</a>
+                        <a href="https://instagram.com/surfhirescotland" target="_blank" class="btn">Instagram</a></p>
                 </div>
             </div>
         </div>
     </section>
 
+        <!-- Guide Section -->
+        <section class="section guide-section" id="guide">
+            <div class="container">
+                <h2 class="section-title">Guide to Surfing NE Scotland</h2>
+                <p class="section-subtitle">Discover the best spots and tips</p>
+                
+                <div class="guide-content">
+                    <div class="guide-info">
+                        <p>Our comprehensive guide to surfing in North East Scotland provides valuable information on local surf spots, seasonal conditions, and insider tips to make the most of your surf adventure.</p>
+                        
+                        <p>Written by our experienced team of local surfers, this guide will help you navigate the beautiful yet challenging coastline of Scotland.</p>
+                        
+                        <a href="https://www.bluecoastcullen.co.uk/guides/surf-guide-moray-aberdeenshire" target="_blank" class="btn" style="margin-top: 10px; width: 100%; text-align: center;">Download Free Guide</a>
+                    </div>
+                    
+                    <div class="guide-img">
+                        <img src="images/book.jpeg" alt="Surfing Guide Cover" class="rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
     <!-- Safety Section -->
-    <section class="section" id="safety">
+    <section class="section forecast-section" id="safety">
         <div class="container">
             <h2 class="section-title">Hire Safety</h2>
             <p class="section-subtitle">Your safety is our top priority</p>
             
             <div class="safety-grid">
                 <div class="safety-card">
-                    <img src="/api/placeholder/400/200" alt="RIP Current Safety" class="safety-img">
+                    <img src="images/rip-currents.png" alt="RIP Current Safety" class="safety-img">
                     <div class="safety-content">
                         <h3>RIP Current Safety</h3>
                         <p>Know how to identify and safely navigate rip currents when surfing. Always stay calm and swim parallel to the shore if caught in a rip.</p>
@@ -829,7 +839,7 @@
                 </div>
                 
                 <div class="safety-card">
-                    <img src="/api/placeholder/400/200" alt="Surf Etiquette" class="safety-img">
+                    <img src="images/surf-etiquette.jpg" alt="Surf Etiquette" class="safety-img">
                     <div class="safety-content">
                         <h3>Surf Etiquette</h3>
                         <p>Respect other surfers in the water. Learn proper surf etiquette including priority rules, paddling out, and sharing waves safely.</p>
@@ -837,50 +847,12 @@
                 </div>
             </div>
             
-            <p class="text-center"><a href="https://docs.google.com/document/d/1z9VlollUswTZEbB0yJx-sOmRpA6BReeTh9c8YW-Mlw0/edit" target="_blank" class="btn">View Full Terms & Conditions</a></p>
-            
             <div class="partner-logos">
-                <img src="/api/placeholder/150/80" alt="RNLI Water Safety Logo" class="partner-logo">
-                <img src="/api/placeholder/150/80" alt="SUP Standards Logo" class="partner-logo">
+                <img src="images/rnli.png" alt="RNLI Water Safety Logo" class="partner-logo">
+                <img src="images/supstandards.png" alt="SUP Standards Logo" class="partner-logo">
+                <img src="images/ssf.png" alt="Scottish Surfing Federation Logo" class="partner-logo">
+                <img src="images/slsgb.png" alt="Surf Life Saving Great Britain Logo" class="partner-logo">
             </div>
-            
-            <p class="text-center mt-4">We follow advice & guidelines for equipment rental from RNLI and SUP Standards.</p>
-        </div>
-    </section>
-
-    <!-- Guide Section -->
-    <section class="section guide-section" id="guide">
-        <div class="container">
-            <h2 class="section-title">Guide to Surfing NE Scotland</h2>
-            <p class="section-subtitle">Discover the best spots and tips</p>
-            
-            <div class="guide-content">
-                <div class="guide-info">
-                    <p>Our comprehensive guide to surfing in North East Scotland provides valuable information on local surf spots, seasonal conditions, and insider tips to make the most of your surf adventure.</p>
-                    
-                    <p>Written by our experienced team of local surfers, this guide will help you navigate the beautiful yet challenging coastline of Scotland.</p>
-                    
-                    <a href="https://www.bluecoastcullen.co.uk/guides" target="_blank" class="btn mt-3">Download Free Guide</a>
-                </div>
-                
-                <div class="guide-img">
-                    <img src="/api/placeholder/500/300" alt="Surfing Guide Cover" class="rounded shadow">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="section" id="about">
-        <div class="container">
-            <h2 class="section-title">About Us</h2>
-            <p class="section-subtitle">Meet the team behind Cullen Surf Hire</p>
-            
-            <div class="team-img">
-                <img src="/api/placeholder/800/400" alt="Blue Coast Team" class="rounded shadow">
-            </div>
-            
-            <p class="text-center">Our team are all experienced surfers, instructors, and beach lifeguards, at hand to offer help and advice on the best equipment for you to suit the conditions and your level and goals.</p>
         </div>
     </section>
 
@@ -892,8 +864,8 @@
                     <h3 class="footer-title">Contact Us</h3>
                     <ul class="footer-links">
                         <li><i class="fas fa-map-marker-alt"></i> Cullen Beach, Moray, Scotland</li>
-                        <li><i class="fas fa-phone"></i> +44 7890 123456</li>
-                        <li><i class="fas fa-envelope"></i> info@cullensurfhire.co.uk</li>
+                        <li><i class="fas fa-phone"></i> +44 7450 403794</li>
+                        <li><i class="fas fa-envelope"></i> info@surfhirescotland.co.uk</li>
                     </ul>
                 </div>
                 
@@ -901,8 +873,6 @@
                     <h3 class="footer-title">Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#options">How It Works</a></li>
-                        <li><a href="#equipment">Equipment</a></li>
-                        <li><a href="#prices">Prices</a></li>
                         <li><a href="#forecast">Surf Forecast</a></li>
                         <li><a href="https://docs.google.com/document/d/1z9VlollUswTZEbB0yJx-sOmRpA6BReeTh9c8YW-Mlw0/edit" target="_blank">Terms & Conditions</a></li>
                     </ul>
@@ -911,15 +881,14 @@
                 <div class="footer-col">
                     <h3 class="footer-title">Other Services</h3>
                     <ul class="footer-links">
-                        <li><a href="https://www.bluecoastcullen.co.uk/lessons" target="_blank">Surf Lessons</a></li>
-                        <li><a href="https://www.bluecoastcullen.co.uk/guides" target="_blank">Surf Guides</a></li>
-                        <li><a href="https://www.bluecoastcullen.co.uk" target="_blank">Blue Coast Surf</a></li>
+                        <li><a href="https://www.bluecoastcullen.co.uk/surf-lessons" target="_blank">Surf Lessons</a></li>
+                        <li><a href="https://www.bluecoastcullen.co.uk/guides" target="_blank">Local Spots eBook</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-col">
                     <h3 class="footer-title">Newsletter</h3>
-                    <p>Subscribe to receive updates on surf conditions, special offers, and events.</p>
+                    <p>Subscribe to receive updates on our special offers and events.</p>
                     <form class="subscribe-form">
                         <input type="email" placeholder="Your email" class="subscribe-input" required>
                         <button type="submit" class="subscribe-btn"><i class="fas fa-paper-plane"></i></button>
@@ -928,156 +897,139 @@
             </div>
             
             <div class="copyright">
-                <p>Cullen Surf Hire and Surf Hire Scotland are trading names of Blue Coast Surf Ltd &copy; 2024</p>
+                <p>
+                    Cullen Surf Hire and Surf Hire Scotland are trading names of Blue Coast Surf Ltd &copy; 
+                    <span id="year"></span>
+                  </p>
             </div>
         </div>
     </footer>
 
     <!-- JavaScript -->
     <script>
-        // Mobile Menu Toggle
         document.addEventListener('DOMContentLoaded', function() {
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            
-            menuToggle.addEventListener('click', function() {
-                navLinks.classList.toggle('active');
-            });
-            
-            // Close menu when clicking on a nav link
-            document.querySelectorAll('.nav-links a').forEach(link => {
-                link.addEventListener('click', function() {
-                    navLinks.classList.remove('active');
-                });
-            });
-            
-            // Navbar scroll effect
-            window.addEventListener('scroll', function() {
-                const navbar = document.querySelector('.navbar');
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
-            
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    if (this.getAttribute('href') !== '#') {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            const headerOffset = 80;
-                            const elementPosition = target.getBoundingClientRect().top;
-                            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-                            
-                            window.scrollTo({
-                                top: offsetPosition,
-                                behavior: 'smooth'
-                            });
-                        }
-                    }
-                });
-            });
-            
-            // FareHarbor Widget
-            const bookRegularBtn = document.getElementById('book-regular');
-            const fareharborContainer = document.getElementById('fareharbor-widget-container');
-            const closeWidgetBtn = document.getElementById('close-widget');
-            
-            bookRegularBtn.addEventListener('click', function(e) {
+    // Set the year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    
+    menuToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+        menuToggle.classList.toggle('active');
+        
+        // Prevent body scrolling when menu is open
+        if (navLinks.classList.contains('active')) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close menu when clicking on a nav link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+    });
+    
+    // Close menu when clicking escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            menuToggle.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Navbar scroll effect
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            if (this.getAttribute('href') !== '#') {
                 e.preventDefault();
-                fareharborContainer.style.display = 'block';
-                document.body.style.overflow = 'hidden';
-                
-                // Load FareHarbor widget
-                const fhContainer = document.getElementById('fh-widget-container');
-                
-                // This is a placeholder. In real implementation, you would replace this with actual
-                // FareHarbor embed code provided by FareHarbor for your business
-                fhContainer.innerHTML = `
-                    <div style="padding: 20px; background-color: #f9f9f9; border-radius: 5px;">
-                        <h3>FareHarbor Booking Widget</h3>
-                        <p>This is where the actual FareHarbor booking widget would be embedded.</p>
-                        <p>In a real implementation, you would insert the FareHarbor script and embed code here.</p>
-                        <div style="margin-top: 20px; padding: 20px; background-color: white; border-radius: 5px; border: 1px solid #ddd;">
-                            <h4>Example Booking Form</h4>
-                            <form id="sample-booking-form" style="margin-top: 15px;">
-                                <div style="margin-bottom: 15px;">
-                                    <label style="display: block; margin-bottom: 5px;">Select Equipment:</label>
-                                    <select style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                                        <option>Full Kit (Board, Wetsuit, Accessories)</option>
-                                        <option>Surfboard - Soft</option>
-                                        <option>Surfboard - Hard</option>
-                                        <option>Wetsuit</option>
-                                        <option>Bodyboard</option>
-                                    </select>
-                                </div>
-                                <div style="margin-bottom: 15px;">
-                                    <label style="display: block; margin-bottom: 5px;">Date:</label>
-                                    <input type="date" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                                </div>
-                                <div style="margin-bottom: 15px;">
-                                    <label style="display: block; margin-bottom: 5px;">Time:</label>
-                                    <select style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                                        <option>9:00 AM (3 hours)</option>
-                                        <option>12:00 PM (3 hours)</option>
-                                        <option>3:00 PM (3 hours)</option>
-                                        <option>9:00 AM (All Day)</option>
-                                    </select>
-                                </div>
-                                <div style="margin-bottom: 15px;">
-                                    <label style="display: block; margin-bottom: 5px;">Number of People:</label>
-                                    <select style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ddd;">
-                                        <option>1</option>
-                                        <option>2</option>
-                                        <option>3</option>
-                                        <option>4</option>
-                                        <option>5+</option>
-                                    </select>
-                                </div>
-                                <button type="button" id="simulate-booking" style="background-color: var(--primary-color); color: white; border: none; padding: 12px 20px; border-radius: 5px; cursor: pointer; width: 100%;">Continue to Booking</button>
-                            </form>
-                        </div>
-                    </div>
-                `;
-                
-                // Add event listener to simulate booking
-                document.getElementById('simulate-booking').addEventListener('click', function() {
-                    alert('Thank you for your booking request! In a real implementation, this would proceed to the FareHarbor payment and confirmation system. You would then receive a link to fill out our registration form.');
-                    fareharborContainer.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                });
-            });
-            
-            closeWidgetBtn.addEventListener('click', function() {
-                fareharborContainer.style.display = 'none';
-                document.body.style.overflow = 'auto';
-            });
-            
-            // Close widget when clicking outside the content
-            fareharborContainer.addEventListener('click', function(e) {
-                if (e.target === fareharborContainer) {
-                    fareharborContainer.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
                 }
-            });
+            }
+        });
+    });
+    
+    // Newsletter form submission
+    const subscribeForm = document.querySelector('.subscribe-form');
+    if (subscribeForm) {
+        subscribeForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('.subscribe-input').value;
             
-            // Newsletter form submission
-            const subscribeForm = document.querySelector('.subscribe-form');
-            if (subscribeForm) {
-                subscribeForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    const email = this.querySelector('.subscribe-input').value;
-                    if (email) {
-                        alert('Thank you for subscribing! You will now receive updates on surf conditions and special offers.');
+            if (email) {
+                // Replace this URL with your actual Make.com webhook URL
+                const makeWebhookUrl = 'https://hook.eu1.make.com/rzwyxsrmi8sej2lrzqo4p05u29brcj6v';
+                
+                // Show loading state
+                const submitBtn = this.querySelector('.subscribe-btn');
+                const originalBtnHtml = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+                submitBtn.disabled = true;
+                
+                // Send data to Make.com webhook
+                fetch(makeWebhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        source: 'website_footer',
+                        signup_date: new Date().toISOString()
+                    })
+                })
+                .then(response => {
+                    if (response.ok) {
+                        // Success message
+                        alert('Thank you for subscribing! You will now receive updates on special offers and events.');
                         this.reset();
+                    } else {
+                        // Error message
+                        alert('Something went wrong. Please try again later.');
                     }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Something went wrong. Please try again later.');
+                })
+                .finally(() => {
+                    // Restore button state
+                    submitBtn.innerHTML = originalBtnHtml;
+                    submitBtn.disabled = false;
                 });
             }
         });
+    }
+});
     </script>
+
+    <!-- FareHarbor Lightframe API - do not remove - see: https://fareharbor.com/help/website/resources/lightframe-api/ -->
+<script src="https://fareharbor.com/embeds/api/v1/?autolightframe=yes"></script>
 
     </body>
     </html>
