@@ -1000,7 +1000,7 @@
             e.preventDefault();
             const email = this.querySelector('.subscribe-input').value;
             
-            if (email) {
+            if (email.trim() !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
                 // Replace this URL with your actual Make.com webhook URL
                 const makeWebhookUrl = 'https://hook.eu1.make.com/rzwyxsrmi8sej2lrzqo4p05u29brcj6v';
                 
