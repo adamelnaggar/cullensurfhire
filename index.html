@@ -192,8 +192,8 @@
         
         .hero-title {
             font-size: 3.5rem;
-            margin-bottom: 20px;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            margin-bottom: 5px;
         }
         
         .hero-subtitle {
@@ -617,6 +617,40 @@
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+.prices-section {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+}
+
+.hire-guarantee-container {
+    border: 2px solid var(--primary-color);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px #0003;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.hire-guarantee-heading {
+    color: var(--dark-blue);
+}
+.hire-guarantee-splash {
+    color: var(--accent-color);
+}
+.guarantee-link {
+    margin-top: 8px;
+    color: white;
+    opacity: 0.8;
+    display:block;
+}
+.guarantee-link:hover {
+    opacity: 1;
+    color: white;
+}
+
 /* Responsive adjustments */
 @media (max-width: 576px) {
     .fixed-book-btn {
@@ -685,6 +719,21 @@
     width: 100px;
   }
 }
+.locations {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.location {
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+.location:hover {
+    opacity: 1;
+}
     </style>
 </head>
 <body>
@@ -702,8 +751,9 @@
             </div>
             <ul class="nav-links">
                 <li><a href="#options">How It Works</a></li>
+                <li><a href="#prices">Prices</a></li>
                 <li><a href="#forecast">Surf Forecast</a></li>
-                <li><a href="#guide">Local Guide</a></li>
+                <li><a href="#guide">Spot Guide</a></li>
                 <li><a href="#safety">Safety</a></li>
             </ul>
         </div>
@@ -714,8 +764,14 @@
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title">Surf Hire Right At The Beach in Scotland</h1>
+                <div class="locations">
+                    <div class="location"><i class="fa-solid fa-map-pin hire-guarantee-splash"></i> Cullen</div>
+                    <div class="location"><i class="fa-solid fa-map-pin hire-guarantee-splash"></i> Sandend</div>
+                    <div class="location"><i class="fa-solid fa-map-pin hire-guarantee-splash"></i> Banff</div>
+                </div>
                 <p class="hero-subtitle">A range of quality surfboards and wetsuits for practicing your skills or for your surf trip to Scotland</p>
                 <a href="#options" class="btn">How It Works</a>
+                <a href="#guarantee" class="guarantee-link"><i class="fa-solid fa-money-check-dollar hire-guarantee-splash"></i> Best Price Guaranteed</a>
             </div>
         </div>
     </section>
@@ -754,7 +810,7 @@
     <!-- Options Section -->
     <section class="section" id="options">
         <div class="container">
-            <h2 class="section-title">Hire Options</h2>
+            <h2 class="section-title">Hire Options & Prices</h2>
             <p class="section-subtitle">Choose the option that works best for you</p>
             
             <div class="options-container">
@@ -801,6 +857,146 @@
         </div>
     </section>
 
+    <style>
+.price-list {
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.price-list th {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+}
+
+.price-list th:nth-child(2),
+.price-list th:nth-child(4) {
+  background-color: var(--dark-blue);
+}
+
+.price-list td {
+  padding: 15px;
+  text-align: center;
+  background-color: white;
+  color: var(--text-color);
+}
+
+.price-list td:first-child {
+  text-align: left;
+  font-weight: 500;
+}
+
+.price-list tr:nth-child(even) td {
+  background-color: var(--light-blue);
+}
+
+@media screen and (max-width: 900px) {
+  .price-list {
+    width: 95%;
+  }
+  .hire-guarantee-container {
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .price-list th,
+  .price-list td {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+      </style>
+    <!-- Prices Section -->
+     <div class="prices-section">
+      <table class="price-list" id="prices">
+      <thead>
+      <tr>
+          <th>Equipment</th>
+              <th>3 hours</th>
+          <th>1 day</th>
+          <th>3 days</th>
+          <th>7 days</th>
+              
+              
+          </tr>	</thead>	<tbody>	<tr class="row-1">
+              <td>Soft Surfboard</td>
+              <td>£10</td>
+          <td>£18</td>
+          <td>£45</td>
+          <td>£70</td>
+          </tr>
+        <tr class="row-2">
+              <td>Hard / Hybrid Surfboard</td>
+              <td>£18</td>
+          <td>£27</td>
+          <td>£65</td>
+          <td>£105</td>
+          </tr>
+          <tr class="row-1">
+              <td>Stand Up Paddleboard (inc. buoyancy aid / paddle / leash)</td>
+              <td>£20</td>
+          <td>£30</td>
+          <td>£75</td>
+          <td>£135</td>
+          </tr>
+          <tr class="row-2">
+              <td>Wetsuit (inc. accessories)</td>
+              <td>£10</td>
+          <td>£15</td>
+          <td>£35</td>
+          <td>£60</td>
+          </tr>
+          <tr class="row-1">
+              <td>Extra wetsuit accessories (gloves, boots, hood)</td>
+              <td>£5</td>
+          <td>£7</td>
+          <td>£15</td>
+          <td>£30</td>
+          </tr>
+            <tr class="row-2">
+              <td>Additional Buoyancy Aid</td>
+              <td>£5</td>
+          <td>£8</td>
+          <td>£18</td>
+          <td>£45</td>
+          </tr>
+          <tr class="row-1">
+              <td>Bodyboard</td>
+              <td>£5</td>
+          <td>£8</td>
+          <td>£18</td>
+          <td>£45</td>
+          </tr>
+                <tr class="row-2">
+              <td>Snorkelling Equipment - Snorkel, Mask & Fins</td>
+              <td>£5</td>
+          <td>£8</td>
+          <td>£18</td>
+          <td>£45</td>
+          </tr>
+                  <tr class="row-1">
+              <td>Soft Roof Racks</td>
+              <td>£4</td>
+          <td>£7</td>
+          <td>£14</td>
+          <td>£25</td>
+          </tr>
+          <tbody>
+      </table>
+
+      <div id="guarantee" class="hire-guarantee-container"><h5 class="hire-guarantee-heading"><i class="fa-solid fa-money-check-dollar hire-guarantee-splash"></i> Best Price Guaranteed</h5><div>If you find equivalent equipment available for hire at a lower price from a local competitor, <strong>we’ll match it hassle-free</strong> – and give you 10% off your next hire.</div></div>
+    </div>
+
     <!-- Forecast Section -->
     <section class="section forecast-section" id="forecast">
         <div class="container">
@@ -809,7 +1005,10 @@
             
             <div class="forecast-content">
                 <div class="forecast-info">
-                    <p>Stay up to date with the latest surf conditions at Cullen Beach. Check out the Surfline forecast below for detailed information, or follow us on social media for live updates throughout the day.</p>
+                    <div class="guide-img">
+                        <img src="images/surf-hire-cullen-beach.jpg" alt="Surf hire trailer right in front of the waves at Cullen Beach" class="rounded shadow" style="display:block;">
+                    </div>
+                    <p style="margin-top:20px;">Stay up to date with the latest surf conditions at Cullen Beach. Check out the Surfline forecast below for detailed information, or follow us on social media for live updates throughout the day.</p>
                     
                     <p>We regularly post live beach conditions, surf reports, and helpful tips on our Instagram. Follow @surfhirescotland for the most accurate and current information.</p>
 
