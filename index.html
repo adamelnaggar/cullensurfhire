@@ -738,7 +738,7 @@
 </head>
 <body>
 <!-- Fixed Book Now Button -->
-<a href="https://bluecoastcullen.co.uk/hire" id="fixed-book-btn" class="fixed-book-btn">
+<a href="https://book.swellbase.io/bluecoast?flow=hire" id="fixed-book-btn" class="fixed-book-btn">
     <i class="fas fa-calendar-check"></i> Book Now
 </a>
  <!-- Navigation -->
@@ -830,7 +830,7 @@
                         </ol>
                     </div>
                     <div class="option-footer">
-                        <a href="https://bluecoastcullen.co.uk/hire" class="btn" id="book-regular">Book Now</a>
+                        <a href="https://book.swellbase.io/bluecoast?flow=hire" class="btn" id="book-regular">Book Now</a>
                     </div>
                 </div>
                 
@@ -1218,7 +1218,6 @@
             const email = this.querySelector('.subscribe-input').value;
             
             if (email.trim() !== '' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                // Replace this URL with your actual Make.com webhook URL
                 const makeWebhookUrl = 'https://hook.eu1.make.com/rzwyxsrmi8sej2lrzqo4p05u29brcj6v';
                 
                 // Show loading state
@@ -1263,6 +1262,7 @@
     }
 });
     </script>
+    <script src="https://book.swellbase.io/embed.js" data-operator="bluecoast"></script>
 
 <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "6aa6ca54e64148b7afb4ff7759a03851"}'></script><!-- End Cloudflare Web Analytics -->
     </body>
